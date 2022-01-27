@@ -40,6 +40,11 @@ public class PodushkaRuTest {
         driver.findElement(By.xpath("//input[@name='privacy_is_accepted']")).click();
         driver.findElement(By.xpath("//button[.='Оформить заказ']")).click();
 
+        Thread.sleep(1000);
+        String orderNumber = driver.findElement(By.xpath("//span[@data-aq-order-id]")).getText();
+        System.out.println("Номер заказа: " + orderNumber);
+        driver.quit();
+
 
 
 
