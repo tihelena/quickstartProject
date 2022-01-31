@@ -24,7 +24,7 @@ public class Triangle {
         return sideC;
     }
 
-    public double getSquare() {
+    public double getSquare(Triangle triangle) {
         return square;
     }
 
@@ -42,11 +42,19 @@ public class Triangle {
 
     @Override
     public String toString() {
-        return "Triangle{" +
-                "sideA=" + sideA +
-                ", sideB=" + sideB +
-                ", sideC=" + sideC +
-                '}';
+        Triangle triangle = new Triangle(sideA, sideB,sideC);
+        String message = "";
+        try {
+           message =  "Triangle{" +
+                    "sideA=" + sideA +
+                    ", sideB=" + sideB +
+                    ", sideC=" + sideC +
+                    ", square=" + squareOfTriangle(triangle) +
+                    '}';
+        } catch (isNotTriangleException e) {
+            e.printStackTrace();
+        }
+        return message;
     }
 
     public static boolean isTriangle(Triangle triangle) throws isNotTriangleException {
