@@ -35,6 +35,13 @@
       <version>${jupiter.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/ru.yandex.qatools.matchers/webdriver-matchers -->
+    <dependency>
+      <groupId>ru.yandex.qatools.htmlelements</groupId>
+      <artifactId>htmlelements-matchers</artifactId>
+      <version>1.20.0</version>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
     <dependency>
       <groupId>org.assertj</groupId>
@@ -49,10 +56,6 @@
       <version>1.2.10</version>
       <scope>test</scope>
     </dependency>
-
-
-
-
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
