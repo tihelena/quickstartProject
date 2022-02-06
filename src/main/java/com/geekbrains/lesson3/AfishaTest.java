@@ -5,17 +5,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.List;
 
 public class AfishaTest {
     public static void main(String[] args) throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         WebDriver driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--disable-notifications");
+        chromeOptions.addArguments("--headless");
+//        System.out.println(Integer.parseInt("14"));
+//        WebDriverManager.chromedriver().setup();
+//        WebDriver driver = new ChromeDriver();
         driver.get("https://afisha.ru");
         //WebDriverWait webDriverWait = new WebDriverWait(driver, 5); //Selenium3
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -23,6 +28,7 @@ public class AfishaTest {
         //loginButton.click();
         driver.findElement(By.xpath("//button[.='Войти']")).click();
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src, 'login')]")));
+        //driver.switchTo().parentFrame(); - если фрейм не закрылся как тут, надо самому вернуться назад
         //Thread.sleep(5000);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login")));
         driver.findElement(By.id("login")).sendKeys("spartalex1993");

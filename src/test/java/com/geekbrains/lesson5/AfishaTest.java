@@ -71,6 +71,8 @@ public class AfishaTest {
         Assertions.assertTrue(driver.getCurrentUrl().contains("imax"));
     }
 
+
+
     @AfterEach
     void tearDown() {
         driver.quit();
