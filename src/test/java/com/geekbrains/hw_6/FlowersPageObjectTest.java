@@ -25,7 +25,7 @@ public class FlowersPageObjectTest {
     @BeforeEach
     void initDriver() {
         driver = new SafariDriver();
-        driver.get("https://podvorje.ru");
+        driver.get(SHOP_URL);
         driver.manage().window().maximize();
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
         actions = new Actions(driver);
