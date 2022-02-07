@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.time.Duration;
+
 
 public class FavoriteRosePage extends BasePage{
 
@@ -21,7 +21,7 @@ public class FavoriteRosePage extends BasePage{
     public FavoriteRosePage bayRose() throws InterruptedException {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ADD_ROSE_BY_XPATH)));
         buttonBay.click();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         return this;
     }
 

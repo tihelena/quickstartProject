@@ -1,6 +1,5 @@
 package com.geekbrains.hw_6;
 
-import com.geekbrains.lesson6.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

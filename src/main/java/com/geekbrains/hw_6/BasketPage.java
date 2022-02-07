@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertEquals;
 
 
 
@@ -22,7 +22,7 @@ public class BasketPage extends BasePage{
     public BasketPage addOneMore() throws InterruptedException {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ONE_MORE_BY_XPATH)));
         plusOne.click();
-        webDriverWait.wait(3000);
+      Thread.sleep(3000);
         return this;
     }
 
@@ -33,7 +33,7 @@ public class BasketPage extends BasePage{
     public BasketPage checkResult() {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(MESSAGE_BY_XPATH)));
        String message = result.getText();
-      //assertThat(message.contains("2999"));
+        assertEquals(true, message.contains("Всего в корзине 2 товара"));
         System.out.println(message);
         return this;
     }

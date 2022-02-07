@@ -42,16 +42,6 @@ public class FlowersPageObjectTest {
                 .goToBasket()
                 .addOneMore()
                 .checkResult();
-
-
-
-
-
-
-
-
-
-
     }
 
 
