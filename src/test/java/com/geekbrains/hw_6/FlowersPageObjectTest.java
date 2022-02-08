@@ -32,6 +32,14 @@ public class FlowersPageObjectTest {
     }
 
     @Test
+    void basicAuth() throws InterruptedException {
+        new PopUpBasicAuthPage(driver)
+                .popUpAuth()
+                .checkUserName()
+                .checkTitle();
+    }
+
+    @Test
     void addRoseToBasket() throws InterruptedException {
         new CatalogPage(driver)
                 .showTopList()

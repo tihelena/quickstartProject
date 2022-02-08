@@ -6,10 +6,33 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class CatalogPage extends BasePage{
 
     public CatalogPage(WebDriver driver) {
         super(driver);
+    }
+
+
+    public final static String USER_NAME_BY_XPATH = "//div[@class='sm_login_login']";
+    @FindBy(xpath = USER_NAME_BY_XPATH)
+    public WebElement user;
+
+    public CatalogPage checkUserName() {
+      String userName = user.getText();
+        assertTrue(userName.contains("Елена"));
+      return this;
+    }
+
+    @FindBy(xpath = "//title")
+    public WebElement title;
+
+    public CatalogPage checkTitle() {
+        String textTitle = title.getText();
+        assertTrue(textTitle.contains("Подворье"));
+        return this;
     }
 
     @FindBy(xpath = "//div[@data-catalog='cat']")
