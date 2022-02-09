@@ -1,23 +1,21 @@
 package com.geekbrains.lesson6;
 
+import com.geekbrains.lesson7.CustomLoggerNew;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.events.EventFiringDecorator;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Iterator;
 
@@ -37,7 +35,7 @@ public class AfishaPageObjectTest {
         //driver = new ChromeDriver();
         //eventFiringWebDriver = new EventFiringWebDriver(new ChromeDriver());
         //eventFiringWebDriver.register(new CustomLoggerThirdSelenium());   3 selenium
-       // driver = new EventFiringDecorator(new CustomLoggerNew()).decorate(new ChromeDriver());
+        driver = new EventFiringDecorator(new CustomLoggerNew()).decorate(new ChromeDriver());
         driver.get(AFISHA_URL);
     }
 

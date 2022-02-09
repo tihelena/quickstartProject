@@ -2,7 +2,6 @@ package com.geekbrains.lesson6;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -45,7 +44,7 @@ public class LoginPage extends BasePage {
     @Step("Заполнить поле пароля")
     public LoginPage fillPassword(String password) {
         passwordInput.sendKeys(password);
-        //webDriverWait.until(d -> d.findElement(By.id("login")).getAttribute("value").contains("@rambler"));
+        webDriverWait.until(d -> d.findElement(By.id("login")).getAttribute("value").contains("@rambler"));
         return this;
     }
 
