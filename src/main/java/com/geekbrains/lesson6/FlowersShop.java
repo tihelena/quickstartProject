@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
 import java.time.Duration;
 
 public class FlowersShop {
@@ -17,6 +19,10 @@ public class FlowersShop {
         driver.get("https://podvorje.ru");
         driver.manage().window().maximize();
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+//        driver.findElement(By.xpath("//a[.='Вход / Регистрация']")).click();
+//        driver.findElement(By.id("login-phone"));
+
 
         driver.findElement(By.xpath("//div[@data-catalog='cat']")).click();
         driver.findElement(By.xpath("//a[@href='/retail/catalogue/roses/index.html']//img[@src='/img/logos/_s50/rose.png']")).click();
