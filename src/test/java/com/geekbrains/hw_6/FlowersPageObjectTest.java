@@ -1,6 +1,7 @@
 package com.geekbrains.hw_6;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;

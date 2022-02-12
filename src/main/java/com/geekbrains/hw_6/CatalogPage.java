@@ -1,5 +1,6 @@
 package com.geekbrains.hw_6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,6 +38,7 @@ public class CatalogPage extends BasePage{
 
     @FindBy(xpath = "//div[@data-catalog='cat']")
     public WebElement catalog;
+
 
     public CatalogPage showTopList() {
         catalog.click();
