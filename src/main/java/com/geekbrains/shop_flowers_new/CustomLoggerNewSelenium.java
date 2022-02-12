@@ -1,4 +1,4 @@
-package com.geekbrains.shop_flowers;
+package com.geekbrains.shop_flowers_new;
 
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.events.WebDriverListener;
 
 import java.io.ByteArrayInputStream;
 
-public class CustomLoggerNew implements WebDriverListener {
+public class CustomLoggerNewSelenium implements WebDriverListener {
     public void beforeClick(WebElement element) {
         System.out.println("Перед кликом");
         Allure.step("Собираемся кликнуть на" + element.getText());

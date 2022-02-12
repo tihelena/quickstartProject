@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.geekbrains</groupId>
@@ -18,7 +18,6 @@
     <maven.compiler.target>17</maven.compiler.target>
     <jupiter.version>5.8.2</jupiter.version>
     <aspectj.version>1.8.10</aspectj.version> <!-- aop.xml -->
-
   </properties>
 
   <dependencies>
@@ -27,7 +26,6 @@
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>${jupiter.version}</version>
-      <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
     <dependency>
@@ -42,7 +40,6 @@
       <artifactId>htmlelements-matchers</artifactId>
       <version>1.20.0</version>
     </dependency>
-
     <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
     <dependency>
       <groupId>org.assertj</groupId>
@@ -63,7 +60,6 @@
       <artifactId>allure-junit5</artifactId>
       <version>2.17.2</version>
     </dependency>
-
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
@@ -76,7 +72,24 @@
       <artifactId>webdrivermanager</artifactId>
       <version>5.0.3</version>
     </dependency>
-
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>7.2.3</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>7.2.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId>selenide</artifactId>
+      <version>6.2.0</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -157,7 +170,6 @@
         </configuration>
       </plugin>
     </plugins>
-
   </build>
 
   <reporting>
@@ -169,4 +181,15 @@
       </plugin>
     </plugins>
   </reporting>
+
+  <repositories>
+    <repository>
+      <id>asdfsadf</id>
+      <url>asdfasdfasdf.ru</url>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+
+  </distributionManagement>
 </project>

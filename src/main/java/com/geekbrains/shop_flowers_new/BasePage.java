@@ -1,4 +1,4 @@
-package com.geekbrains.shop_flowers;
+package com.geekbrains.shop_flowers_new;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
